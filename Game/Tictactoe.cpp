@@ -76,12 +76,6 @@ void choice()
 int main()
 {
 	int i, j;
-	//system("cls");
-	//cout << "\n\n\tTic Tac Toe\n\n";
-	//cout << "Welcome To Tic-tac-toe game! Play with your way!\nIf you find any problem, please contact john.nguyen@gameloft.com";
-
-	//cout << "\n\nSELECT YOUR MODE (1 - PLAY GAME, OTHERS - EXIT GAME):\n\n"; cin >> mode;
-
 	do
 	{
 		cout << "\n\n\tTic Tac Toe\n\n";
