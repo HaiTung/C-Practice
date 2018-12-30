@@ -62,7 +62,7 @@ int checkWin()
 	}
 }
 
-void doi()
+void choice()
 {
 	system("cls");
 	for (int i = 0; i < 3; i++)
@@ -87,7 +87,7 @@ int main()
 		cout << "\nPlay 1: "; cin >> play1;
 		cout << "\nPlay 2: "; cin >> play2;
 		cout << endl;
-		doi();
+		choice();
 		int dem = 0, s, n;
 		do
 		{
@@ -107,7 +107,7 @@ int main()
 					 if (Matrix[i][j] != 'X'&& Matrix[i][j] != 'O')
 					 {
 						 Matrix[i][j] = s;
-						 doi();
+						 choice();
 						 dem++;
 
 					 }
@@ -142,7 +142,7 @@ int main()
 					if (Matrix[i][j] != 'X'&& Matrix[i][j] != 'O')
 					{
 						Matrix[i][j] = s;
-						doi();
+						choice();
 						dem++;
 
 					}
