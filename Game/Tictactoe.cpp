@@ -88,10 +88,10 @@ int main()
 		cout << "\nPlay 2: "; cin >> play2;
 		cout << endl;
 		choice();
-		int dem = 0, s, n;
+		int play = 0, s, n;
 		do
 		{
-			if (dem % 2 == 0)
+			if (play % 2 == 0)
 			{
 				
 				
@@ -108,7 +108,7 @@ int main()
 					 {
 						 Matrix[i][j] = s;
 						 choice();
-						 dem++;
+						 play++;
 
 					 }
 				
@@ -143,7 +143,7 @@ int main()
 					{
 						Matrix[i][j] = s;
 						choice();
-						dem++;
+						play++;
 
 					}
 					
