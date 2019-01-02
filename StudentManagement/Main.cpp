@@ -104,3 +104,13 @@ void getInforStudent() {
 	}
 }
 
+// Check id
+bool checkIdExit(int id, vector<Student> students) {
+	for (int i = 0; i < students.size(); i++) {
+		if (students.at(i).ID == id)
+			return false;
+	}
+	return true;
+}
+
+
