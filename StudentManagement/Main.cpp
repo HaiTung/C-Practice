@@ -63,6 +63,8 @@ void question() {
 		else cout << "Save file Failed, Try it!" << endl;
 		system("pause");
 		break;
+	case 4:
+		showStudents(students); break;
 	case 0:
 		wantExit = true;
 		break;
@@ -122,6 +124,38 @@ void continueInsertStudent() {
 	char select;
 	cin >> select;
 	if (select == 'Y') getInforStudent();
+}
+
+// check id 
+bool checkIdExit(int id, vector<Student> students) {
+	for (int i = 0; i < students.size(); i++) {
+		if (students.at(i).ID == id)
+			return false;
+	}
+	return true;
+}
+
+bool insertStudent(Student student, vector<Student> *students) {
+	int oldSize = students->size();
+	students->push_back(student);
+
+	if (oldSize < students->size())
+		return true;
+	return false;
+}
+//
+bool saveStudentsToFile(vector<Student> students) {
+	ofstream insertToFile(FILE_PATH, std::ios::out);
+	for (int i = 0; i < students.size(); i++) {
+		insertToFile << students.at(i).ID << endl;
+		insertToFile << students.at(i).Name << endl;
+		insertToFile << students.at(i).Score << endl;
+		if (insertToFile.fail())
+			return false;
+	}
+
+	insertToFile.close();
+	return true;
 }
 
 
