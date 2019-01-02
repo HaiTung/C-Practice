@@ -4,7 +4,7 @@
 #include <fstream>
 
 using namespace std;
-const string FILE_PATH = "Student_manager.txt";
+const string File = "Student_manager.txt";
 
 struct Student
 {
@@ -145,7 +145,7 @@ bool insertStudent(Student student, vector<Student> *students) {
 }
 //
 bool saveStudentsToFile(vector<Student> students) {
-	ofstream insertToFile(FILE_PATH, std::ios::out);
+	ofstream insertToFile(File, std::ios::out);
 	for (int i = 0; i < students.size(); i++) {
 		insertToFile << students.at(i).ID << endl;
 		insertToFile << students.at(i).Name << endl;
