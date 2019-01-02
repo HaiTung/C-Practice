@@ -23,7 +23,6 @@ void continueInsertStudent();
 bool checkIdExit(int id, vector<Student> students);
 bool insertStudent(Student student, vector<Student> *students);
 bool saveStudentsToFile(vector<Student> students);
-bool loadStudentsFromFile(vector<Student> *students);
 
 int main() {
 	while (!wantExit)
@@ -62,11 +61,6 @@ void question() {
 	case 3:
 		if (saveStudentsToFile(students)) cout << "Save file success!" << endl;
 		else cout << "Save file Failed, Try it!" << endl;
-		system("pause");
-		break;
-	case 4:
-		if (loadStudentsFromFile(&students)) cout << "Load file to List success!" << endl;
-		else cout << "Load file to List Failed. Try it!" << endl;
 		system("pause");
 		break;
 	case 0:
@@ -110,55 +104,3 @@ void getInforStudent() {
 	}
 }
 
-
-bool checkIdExit(int id, vector<Student> students) {
-	for (int i = 0; i < students.size(); i++) {
-		if (students.at(i).ID == id)
-			return false;
-	}
-	return true;
-}
-
-
-bool insertStudent(Student student, vector<Student> *students) {
-	int oldSize = students->size();
-	students->push_back(student);
-
-	if (oldSize < students->size())
-		return true;
-	return false;
-}
-
-void continueInsertStudent() {
-	cout << "You want continue insert student? (Y/N)";
-
-	char select;
-	cin >> select;
-	if (select == 'Y') getInforStudent();
-}
-
-void showStudents(vector<Student> students) {
-	system("cls");
-	cout << "ID\t\tFull Name\t\tScore" << endl;
-	for (int i = 0; i < students.size(); i++) {
-		cout << students.at(i).ID << "\t\t";
-		cout << students.at(i).Name << "\t\t";
-		cout << students.at(i).Score << endl;
-	}
-	cout << endl << endl;
-	system("pause");
-}
-
-bool saveStudentsToFile(vector<Student> students) {
-	ofstream insertToFile(FILE_PATH, std::ios::out);
-	for (int i = 0; i < students.size(); i++) {
-		insertToFile << students.at(i).ID << endl;
-		insertToFile << students.at(i).Name << endl;
-		insertToFile << students.at(i).Score << endl;
-		if (insertToFile.fail())
-			return false;
-	}
-
-	insertToFile.close();
-	return true;
-}
