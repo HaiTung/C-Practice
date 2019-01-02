@@ -71,6 +71,18 @@ void question() {
 	}
 }
 
+void showStudents(vector<Student> students) {
+	system("cls");
+	cout << "ID\t\tFull Name\t\tScore" << endl;
+	for (int i = 0; i < students.size(); i++) {
+		cout << students.at(i).ID << "\t\t";
+		cout << students.at(i).Name << "\t\t";
+		cout << students.at(i).Score << endl;
+	}
+	cout << endl << endl;
+	system("pause");
+}
+
 // Get id, name, score of student
 void getInforStudent() {
 	system("cls");
@@ -103,14 +115,14 @@ void getInforStudent() {
 		return;
 	}
 }
+// get continue Insert Student
+void continueInsertStudent() {
+	cout << "You want continue insert student? (Y/N)";
 
-// Check id
-bool checkIdExit(int id, vector<Student> students) {
-	for (int i = 0; i < students.size(); i++) {
-		if (students.at(i).ID == id)
-			return false;
-	}
-	return true;
+	char select;
+	cin >> select;
+	if (select == 'Y') getInforStudent();
 }
+
 
 
