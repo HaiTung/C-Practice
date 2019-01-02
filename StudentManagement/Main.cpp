@@ -77,7 +77,7 @@ void question() {
 	}
 }
 
-//
+// Get id, name, score of student
 void getInforStudent() {
 	system("cls");
 	cout << "----- INSERT STUDENT -----" << endl;
