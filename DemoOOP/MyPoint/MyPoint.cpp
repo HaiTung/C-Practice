@@ -1,55 +1,30 @@
 #include "MyPoint.h"
 #include<iostream>
 #include<math.h>
+#include<string>
+#include <algorithm>
 
 using namespace std;
 
 
-MyPoint::MyPoint(int x, int y)
-{
-	this->mPosX = x;
-	this->mPosY = y;
-}
 
-void MyPoint::Display()
-{
-	cout << "X : " << mPosX << "- Y : " << mPosY << endl;
-}
-
-void MyPoint::SetX(int x)
-{
+MyPoint::MyPoint() {}
+void MyPoint::setX(int x) {
 	this->mPosX = x;
 }
-
-int MyPoint::GetX()
-{
-	return this->mPosX;
+void MyPoint::Display() {
+	cout << "(" << mPosX << ";" << mPosY << ")";
 }
-
-void MyPoint::SetY(int y)
-{
+int MyPoint::getX() {
+	return mPosX;
+}
+void MyPoint::setY(int y) {
 	this->mPosY = y;
 }
-
-int MyPoint::GetY()
-{
-	return this->mPosY;
+int MyPoint::getY() {
+	return mPosY;
 }
-
-double MyPoint::Distance(MyPoint p)
-{
-	return sqrt((GetX() - p.mPosX)*(GetX() - p.mPosX) + (GetY() - p.mPosY)*(GetY() - p.mPosY));
-}
-
-MyPoint::MyPoint(const MyPoint & point)
-{
-	this->mPosX = point.mPosX;
-	this->mPosY = point.mPosY;
-}
-MyPoint::MyPoint()
-{
-}
-
-MyPoint::~MyPoint()
-{
+float MyPoint::khoangcach(MyPoint d) {
+	return sqrt(pow(d.mPosX - mPosX, 2) + pow(d.mPosY - mPosY, 2));
+	system("pause");
 }

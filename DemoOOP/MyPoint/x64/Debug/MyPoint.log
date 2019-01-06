@@ -1,0 +1,4 @@
+﻿  MyPoint.cpp
+g:\gameloft\oop\c-practice\demooop\mypoint\mypoint.cpp(28): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  MyPoint.vcxproj -> G:\Gameloft\OOP\C-Practice\DemoOOP\x64\Debug\MyPoint.exe
+  MyPoint.vcxproj -> G:\Gameloft\OOP\C-Practice\DemoOOP\x64\Debug\MyPoint.pdb (Partial PDB)
