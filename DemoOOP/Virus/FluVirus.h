@@ -2,23 +2,22 @@
 #include"Virus.h"
 #include <vector>
 
-class FluVirus
+class FluVirus : public Virus
 {
+private: int m_color;
 public:
-	FluVirus(FluVirus *fluVirus);
-	void loadADNInformation();
-	int reducResistance(int);
-	void DoBorn() ; 
-	void DoDie();
-	int intResistance();
-	FluVirus();
-	virtual~FluVirus();
-private:
-	int m_color;
-protected:
-	int m_resistance;
-	char *m_dna;
+	void DoBorn() {
+		this->LoadADNInformation();
+		this->m_color = rand() % 100;
+	}
+	Virus * DoClone() {
 
+	}
+	void DoDie() {
 
+	}
+	void InitResistance(int m_resistance) {
+
+	}
 };
 
