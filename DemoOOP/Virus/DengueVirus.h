@@ -10,7 +10,8 @@ class DengueVirus
 
 private: 
 	char NS3[4] = { 'N','S','3',' ' };
-
+	char NS5[4] = {'N','S','5',' '};
+	char E[4] = {'E',' ',' ',' '};
 
 public:
 
