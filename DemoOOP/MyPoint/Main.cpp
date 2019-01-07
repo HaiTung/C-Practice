@@ -4,7 +4,6 @@
 #include <algorithm>
 
 
-
 using namespace std;
 int main()
 {
@@ -16,6 +15,8 @@ int main()
 	float kc = t.khoangcach(d);
 	cout << kc;
 	t.Display();
-	return 0;
+	
 	system("pause");
+	return 0;
+
 }

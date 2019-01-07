@@ -30,7 +30,3 @@ void FluVirus::DoDie()
 {
 	delete this;
 }
-void FluVirus::DoDie()
-{
-	delete this;
-}

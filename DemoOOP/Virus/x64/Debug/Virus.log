@@ -1,1 +1,3 @@
-﻿
+﻿  FluVirus.cpp
+g:\gameloft\oop\c-practice\demooop\virus\fluvirus.cpp(34): error C2084: function 'void FluVirus::DoDie(void)' already has a body
+  g:\gameloft\oop\c-practice\demooop\virus\fluvirus.cpp(29): note: see previous definition of 'DoDie'

@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 	FluVirus *fluVirus = new FluVirus();
-	fluVirus->DoDie();
+	fluVirus->DoBorn();
 	system("pause");
 	return 0;
 }

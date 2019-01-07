@@ -1,6 +1,7 @@
 #pragma once
 #include<vector>
 #include "Virus.h"
+#include"FluVirus.h"
 
 
 class DengueVirus

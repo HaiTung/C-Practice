@@ -2,20 +2,23 @@
 #include<vector>
 class Virus
 {
+private: char *m_dna;
+		 int m_resistance;
 public:
-	Virus(Virus *virus);
-	void loadADNInformation();
-	int reducResistance(int);
-
-	virtual void DoBorn() = 0;
-	virtual void DoDie() = 0;
-	virtual Virus *DoClone() = 0;
-
-protected : 
-	int m_resistance;
-	char *m_dna;
-
 	Virus();
-	virtual~Virus();
+	void LoadADNInformation();
+	int ReduceResistance(int medicince_resistance) {
+		int m_res;
+		m_res = this->m_resistance - medicince_resistance;
+		if (m_res <= 0)
+			return -1;
+		return 1;
+	}
+	virtual void DoBorn() {};
+	virtual Virus * DoClone() {};
+	virtual void DoDie() {};
+	virtual void InitResistance(int m_resistance) {};
+
+	
 };
 
