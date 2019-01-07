@@ -1,17 +1,24 @@
 #pragma once
 #include"Virus.h"
+#include <vector>
 
 class FluVirus
 {
-private: int m_color;
-
 public:
 	FluVirus(FluVirus *fluVirus);
-
-	void DoBorn();
+	void loadADNInformation();
+	int reducResistance(int);
+	void DoBorn() ; 
 	void DoDie();
 	int intResistance();
 	FluVirus();
 	virtual~FluVirus();
+private:
+	int m_color;
+protected:
+	int m_resistance;
+	char *m_dna;
+
+
 };
 
