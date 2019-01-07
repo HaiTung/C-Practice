@@ -19,5 +19,6 @@ public:
 	void InitResistance(int m_resistance) {
 
 	}
+	virtual~FluVirus();
 };
 

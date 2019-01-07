@@ -4,28 +4,27 @@
 #include"FluVirus.h"
 
 
-class DengueVirus
+class DengueVirus : public Virus
 {
-	protected :
-		char m_protein[4];
-
-private: 
-	char NS3[4] = { 'N','S','3',' ' };
-	char NS5[4] = {'N','S','5',' '};
-	char E[4] = {'E',' ',' ',' '};
-
+private:
+	char *m_protein;
 public:
+	void DoBorn() {
+		this->LoadADNInformation();
+		char *a[] = { "NS3","NS5","E" };
+		int v;
+		v = rand() % 2;
+		strcpy(this->m_protein, a[v]);
+	}
+	Virus * DoClone() {
 
+	}
+	void DoDie() {
 
-	DengueVirus();
-	virtual~DengueVirus();
+	}
+	void InitResistance(int m_resistance) {
 
-	DengueVirus(DengueVirus * den);
-	void BoBorn();
-	void DoClone();
-	void DoDie();
-	int  InitResistance();
-
+	}
 
 };
 
