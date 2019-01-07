@@ -4,7 +4,7 @@
 #include <vector>
 
 
-
+assd
 FluVirus::FluVirus()
 {
 }
@@ -26,6 +26,10 @@ void FluVirus::DoBorn()
 	int load = rand() % 10;
 	this->m_color = rand() % 2;
 
+}
+void FluVirus::DoDie()
+{
+	delete this;
 }
 void FluVirus::DoDie()
 {
