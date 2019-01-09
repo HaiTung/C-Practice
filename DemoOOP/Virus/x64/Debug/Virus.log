@@ -1,3 +1,4 @@
-﻿  FluVirus.cpp
-g:\gameloft\oop\c-practice\demooop\virus\fluvirus.cpp(34): error C2084: function 'void FluVirus::DoDie(void)' already has a body
-  g:\gameloft\oop\c-practice\demooop\virus\fluvirus.cpp(29): note: see previous definition of 'DoDie'
+﻿  Patient.cpp
+g:\gameloft\oop\c-practice\demooop\virus\patient.cpp(79): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Virus.vcxproj -> G:\Gameloft\OOP\C-Practice\DemoOOP\x64\Debug\Virus.exe
+  Virus.vcxproj -> G:\Gameloft\OOP\C-Practice\DemoOOP\x64\Debug\Virus.pdb (Full PDB)

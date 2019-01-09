@@ -11,20 +11,16 @@ class Patient
 {
 private:
 	int m_resistance;
-	list<Virus*> m_virusList;
+	vector<Virus*> m_virusList;
 	int m_state;
 public:
 	Patient();
-	Patient(int m_resistance, list<Virus*> m_virusList, int m_state);
 	int InitResistance();
-	void DoStart();
+	void DoStart() ;
 	void TakeMedicine();
-	void ReduceResistance(int medicine_resistance);
-	void DoDie() {
-		m_state = 0;
-	}
-	int GetState() {
-		return m_state;
-	}
+	void DoDie();
+	int GetState();
+	int get_m_resistance();
+	vector<Virus *> GetviruList();
 };
 

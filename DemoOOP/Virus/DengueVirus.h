@@ -2,29 +2,26 @@
 #include<vector>
 #include "Virus.h"
 #include"FluVirus.h"
+#include <vector>
 
+using namespace std;
 
 class DengueVirus : public Virus
 {
 private:
 	char *m_protein;
+
+
 public:
-	void DoBorn() {
-		this->LoadADNInformation();
-		char *a[] = { "NS3","NS5","E" };
-		int v;
-		v = rand() % 2;
-		strcpy(this->m_protein, a[v]);
-	}
-	Virus * DoClone() {
-
-	}
-	void DoDie() {
-
-	}
-	void InitResistance(int m_resistance) {
-
-	}
+	DengueVirus();
+	virtual ~DengueVirus();
+	std::vector<Virus*> DoClone() override;
+	void DoBorn() override;
+	void DoDie() override;
+	DengueVirus(const DengueVirus * dengueVirus);
+	int InitResistance() override;
+	void SetProtein(string protein);
+	string GetProtein();
 
 };
 
